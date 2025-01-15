@@ -5,26 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Special Traditions</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
-        <h1>Special Traditions</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="details.html">Wedding Details</a></li>
-                <li><a href="schedule.html">Schedule of Events</a></li>
-                <li><a href="rsvp.html">RSVP</a></li>
-                <li><a href="travel.html">Travel & Accommodations</a></li>
-                <li><a href="registry.html">Gift Registry</a></li>
-                <li><a href="photos.html">Photo Galleries</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="party.html">Wedding Party</a></li>
-                <li><a href="traditions.html">Special Traditions</a></li>
-            </ul>
-        </nav>
+    <header className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div className="container">
+            <a className="navbar-brand" href="index.html">Natalie & Nathan's Wedding</a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav ml-auto">
+                    <li className="nav-item"><a className="nav-link" href="index.html">Home</a></li>
+                    <li className="nav-item"><a className="nav-link" href="details.html">Wedding Details</a></li>
+                    <li className="nav-item"><a className="nav-link" href="schedule.html">Schedule of Events</a></li>
+                    <li className="nav-item"><a className="nav-link" href="rsvp.html">RSVP</a></li>
+                    <li className="nav-item"><a className="nav-link" href="travel.html">Travel & Accommodations</a></li>
+                    <li className="nav-item"><a className="nav-link" href="registry.html">Gift Registry</a></li>
+                    <li className="nav-item"><a className="nav-link" href="photos.html">Photo Galleries</a></li>
+                    <li className="nav-item"><a className="nav-link" href="faqs.html">FAQs</a></li>
+                    <li className="nav-item"><a className="nav-link" href="party.html">Wedding Party</a></li>
+                    <li className="nav-item"><a className="nav-link" href="traditions.html">Special Traditions</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
-    <main>
+    <main className="container mt-5 pt-5">
         <section>
             <h2>Tradition 1</h2>
             <p>Description of tradition 1.</p>
