@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natalie & Nathan's Wedding</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Natalie & Nathan's Wedding Website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="details.html">Wedding Details</a></li>
+                <li><a href="schedule.html">Schedule of Events</a></li>
+                <li><a href="rsvp.html">RSVP</a></li>
+                <li><a href="travel.html">Travel & Accommodations</a></li>
+                <li><a href="registry.html">Gift Registry</a></li>
+                <li><a href="photos.html">Photo Galleries</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="party.html">Wedding Party</a></li>
+                <li><a href="traditions.html">Special Traditions</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="our-story">
+            <h2>Our Story</h2>
+            <p>Once upon a time, Natalie and Nathan met and embarked on a beautiful journey together. They shared countless adventures, laughter, and love. One magical day, Nathan proposed to Natalie, and she said yes! Now, they are excited to celebrate their love with you.</p>
+        </section>
+        <section id="countdown">
+            <h2>Countdown to Our Wedding</h2>
+            <div id="countdown-timer"></div>
+        </section>
+    </main>
+    <script>
+        // Countdown timer script
+        const weddingDate = new Date("2024-06-15T15:00:00").getTime();
+        const countdownElement = document.getElementById('countdown-timer');
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                countdownElement.innerHTML = "We're Married!";
+            }
+        };
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
