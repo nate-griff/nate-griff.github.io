@@ -1,5 +1,16 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f400;
+    height: 100%;
+    background-color: #f4f4f4;
+}
+
+#root {
+    height: 100%;
+}
+
+embed {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
