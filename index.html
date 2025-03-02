@@ -3,108 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natalie & Nathan's Wedding</title>
+    <title>Natalie & Nathan</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <embed src="6Years.pdf" type="application/pdf" width="100%" height="100%" />
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script type="text/babel">
-        const { useState, useEffect } = React;
-
-        const App = () => {
-            return (
-                <div>
-                    <Header />
-                    <Main />
-                </div>
-            );
-        };
-
-        const Header = () => {
-            return (
-                <header className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                    <div className="container">
-                        <a className="navbar-brand" href="#">Natalie & Nathan's Wedding</a>
-                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span className="navbar-toggler-icon"></span>
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav ml-auto">
-                                <li className="nav-item"><a className="nav-link" href="index.html">Home</a></li>
-                                <li className="nav-item"><a className="nav-link" href="details.html">Wedding Details</a></li>
-                                <li className="nav-item"><a className="nav-link" href="schedule.html">Schedule of Events</a></li>
-                                <li className="nav-item"><a className="nav-link" href="rsvp.html">RSVP</a></li>
-                                <li className="nav-item"><a className="nav-link" href="travel.html">Travel & Accommodations</a></li>
-                                <li className="nav-item"><a className="nav-link" href="registry.html">Gift Registry</a></li>
-                                <li className="nav-item"><a className="nav-link" href="photos.html">Photo Galleries</a></li>
-                                <li className="nav-item"><a className="nav-link" href="faqs.html">FAQs</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </header>
-            );
-        };
-
-        const Main = () => {
-            return (
-                <main className="container mt-5 pt-5">
-                    <OurStory />
-                    <Countdown />
-                </main>
-            );
-        };
-
-        const OurStory = () => {
-            return (
-                <section id="our-story" className="my-5">
-                    <h2 className="text-center">Our Story</h2>
-                    <p>Once upon a time, Natalie and Nathan met and embarked on a beautiful journey together. They shared countless adventures, laughter, and love. One magical day, Nathan proposed to Natalie, and she said yes! Now, they are excited to celebrate their love with you.</p>
-                </section>
-            );
-        };
-
-        const Countdown = () => {
-            const [timeLeft, setTimeLeft] = useState("");
-
-            useEffect(() => {
-                const weddingDate = new Date("2026-02-15T15:00:00").getTime();
-                const updateCountdown = () => {
-                    const now = new Date().getTime();
-                    const distance = weddingDate - now;
-
-                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    setTimeLeft(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-
-                    if (distance < 0) {
-                        clearInterval(countdownInterval);
-                        setTimeLeft("We're Married!");
-                    }
-                };
-
-                const countdownInterval = setInterval(updateCountdown, 1000);
-                return () => clearInterval(countdownInterval);
-            }, []);
-
-            return (
-                <section id="countdown" className="my-5">
-                    <h2 className="text-center">Countdown to Our Wedding</h2>
-                    <div id="countdown-timer" className="text-center">{timeLeft}</div>
-                </section>
-            );
-        };
-
-        ReactDOM.render(<App />, document.getElementById('root'));
-    </script>
 </body>
 </html>
